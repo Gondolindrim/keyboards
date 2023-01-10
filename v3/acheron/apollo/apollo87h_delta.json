@@ -87,15 +87,22 @@
                   "label": "Indicator",
                   "content": [
                   {
+                    "label": "Enable Caps Lock indicator",
+                    "type": "toggle",
+                    "content": ["id_indicator_enabled", 0, 1]
+                  },
+                  {
+                    "showIf": "{id_indicator_enabled} == 1",
                     "label": "Brightness",
                     "type": "range",
                     "options": [0, 255],
-                    "content": ["id_indicator_brightness", 0, 1]
+                    "content": ["id_indicator_brightness", 0, 2]
                   },
                   {
+                    "showIf": "{id_indicator_enabled} == 1",
                     "label": "Color",
                     "type": "color",
-                    "content": ["id_indicator_color", 0, 2]
+                    "content": ["id_indicator_color", 0, 3]
                   }
                   ]
               }
